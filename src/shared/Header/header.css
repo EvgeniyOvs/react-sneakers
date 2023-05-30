@@ -1,0 +1,48 @@
+.header{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-bottom: 1px solid var(--greyEA);
+}
+
+.container{
+    padding: 45px 60px;
+}
+
+.headerLeft{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.logo{
+    margin-right: 16px;
+}
+.basketList{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.basketItem{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    cursor: pointer;
+}
+.basketItem:not(:last-child){
+    margin-right: 30px;
+}
+.basketLogo{
+    margin-right: 10px;
+}
+@media all and (min-width: 320px) and (max-width: 525px) {
+    .header{
+        align-items: flex-start;
+        flex-direction: column;
+    }
+    .container{
+        padding: 20px 20px;
+    }
+    .headerLeft{
+        margin-bottom: 10px;
+    }
+}

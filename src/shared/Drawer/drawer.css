@@ -1,0 +1,198 @@
+.overlay{
+
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.1);
+    z-index: 9;
+    visibility: hidden;
+    overflow: hidden;
+    transition: opacity 0.3s ease-in-out, visibility 0.3s ease-in-out ;
+}
+
+.overlayVisible{
+    visibility: visible;
+    opacity: 1;
+}
+.drawer{
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    width: 420px;
+    right: 0;
+    height: 100%;
+    padding: 30px;
+
+    background: var(--white);
+    box-shadow: -10px 4px 24px rgba(0, 0, 0, 0.1);
+    transform: translateX(100%);
+    transition: transform 0.3s ease-in-out;
+}
+.overlayVisible.drawer{
+    transform: translateX(0);
+}
+.drawerWrapper{
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+
+
+
+.items{
+    flex: 1;
+    overflow: auto;
+    margin-bottom: 40px;
+}
+
+.cartTitle{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 30px;
+}
+.cartItem{
+    padding: 20px;
+    margin-bottom: 20px;
+    display: flex;
+    align-items: center;
+    border: 1px solid var(--whiteF3);
+    border-radius: 20px;
+    overflow: hidden;
+
+}
+.cartItemImg{
+    width: 70px;
+    height: 70px;
+    background-image: url("../../img/sneakers/1.jpg");
+    background-size: contain;
+    background-position: 0 10px;
+    background-repeat: no-repeat;
+    margin-right: 20px;
+}
+
+.image{
+    margin-right: 20px;
+}
+.descr{
+    margin-right: 20px;
+}
+.title{
+
+}
+
+.remove{
+    opacity: 0.5;
+    cursor: pointer;
+    transition: opacity 0.2s ease-in-out;
+}
+
+.remove:hover{
+    opacity: 1;
+}
+
+.count{
+
+}
+.countList{
+    margin-bottom: 40px;
+}
+
+
+
+.countItem{
+    display: flex;
+    align-items: flex-end;
+    margin-bottom: 20px;
+}
+
+.dashed{
+    flex: 1;
+    height: 1px;
+    border-bottom: 1px dashed var(--greyDF);
+    position: relative;
+    top: -4px;
+    margin: 0 7px;
+}
+
+.countBtn{
+    position: relative;
+    width: 100%;
+    height: 55px;
+    border: none;
+    border-radius: 18px;
+    background: var(--green);
+    color: var(--white);
+    font-size: 16px;
+    font-weight: 500;
+    transition: background 0.2s ease-in-out;
+    cursor: pointer;
+}
+
+.countBtn:hover{
+    background: var(--greenB0);
+
+}
+.countBtn:active{
+    background: var(--green7D);
+}
+
+.arrow{
+    position: absolute;
+    right: 40px;
+    top: 20px;
+    transition: transform 0.2s ease-in-out;
+
+}
+
+.countBtn:hover .arrow{
+    transform: translateX(5px);
+
+}
+
+@media all and (min-width: 769px) and (max-width: 1024px) {
+    .drawer{
+        padding: 20px;
+    }
+    .cartTitle{
+        margin-bottom: 15px;
+    }
+    .items{
+        margin-bottom: 10px;
+    }
+    .countList{
+        margin-bottom: 20px;
+    }
+}
+
+@media all and (min-width: 526px) and (max-width: 769px) {
+    .drawer{
+        padding: 20px;
+    }
+    .cartTitle{
+        margin-bottom: 15px;
+    }
+    .items{
+        margin-bottom: 10px;
+    }
+    .countList{
+        margin-bottom: 20px;
+    }
+}
+@media all and (min-width: 320px) and (max-width: 525px) {
+    .drawer{
+        padding: 20px;
+        width: 100%;
+    }
+    .cartTitle{
+        margin-bottom: 15px;
+    }
+    .items{
+        margin-bottom: 10px;
+    }
+    .countList{
+        margin-bottom: 20px;
+    }
+}
